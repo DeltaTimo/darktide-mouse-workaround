@@ -1,6 +1,6 @@
 return {
 	mod_name = {
-		en = "Mouse Workaround",
+		en = "Faulty Mouse Workaround",
 	},
 	mod_description = {
 		en = "Allows to set a release timer for mouses that sometimes loose clicks for a very short period.",
