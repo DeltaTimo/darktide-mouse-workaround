@@ -14,6 +14,16 @@ return {
         unit_text = "millis",
         decimals_number = 0,
       },
+      {
+        setting_id = "enable_left_mouse",
+        type = "checkbox",
+        default_value = true,
+      },
+      {
+        setting_id = "enable_right_mouse",
+        type = "checkbox",
+        default_value = true,
+      }
 		},
 	},
 }

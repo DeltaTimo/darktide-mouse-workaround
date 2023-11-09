@@ -3,12 +3,20 @@
 local mod = get_mod("mouse_workaround")
 
 local release_delay = 0
+local enable_left_mouse = true
+local enable_right_mouse = true
 
 mod:hook("InputDevice", "held", function(func, self, id, ...)
   local ret = func(self, id, ...)
 
-  -- If button is down or it's not a mouse, don't do anything.
-  if self.device_type ~= "mouse" or release_delay == 0 then
+  -- If it's not a mouse, delay is disabled/0 or button is not left or right, don't do anything.
+  if self.device_type ~= "mouse" or release_delay == 0 or not (id == 0 or id == 1) then
+    return ret
+  end
+
+  -- Don't do anything if not enabled for this mouse button.
+  if (id == 0 and not enable_left_mouse)
+    or (id == 1 and not enable_right_mouse) then
     return ret
   end
 
@@ -50,6 +58,8 @@ end)
 -- Handle settings.
 mod.on_setting_changed = function()
   release_delay = mod:get("release_delay") / 1000
+  enable_left_mouse = mod:get("enable_left_mouse")
+  enable_right_mouse = mod:get("enable_right_mouse")
 end
 
 -- Get and transform the settings to the required format.
