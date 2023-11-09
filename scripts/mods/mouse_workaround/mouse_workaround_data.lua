@@ -23,7 +23,21 @@ return {
         setting_id = "enable_right_mouse",
         type = "checkbox",
         default_value = true,
-      }
+      },
+      {
+        setting_id = "hold_required_help",
+        type = "group",
+        sub_widgets = {
+          {
+            setting_id = "hold_required",
+            type = "numeric",
+            default_value = 0,
+            range = {0, 200},
+            unit_text = "millis",
+            decimals_number = 0,
+          },
+        },
+      },
 		},
 	},
 }
