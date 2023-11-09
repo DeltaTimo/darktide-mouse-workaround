@@ -9,7 +9,7 @@ return {
       {
         setting_id = "release_delay",
         type = "numeric",
-        default_value = 50,
+        default_value = 20,
         range = {0, 200},
         unit_text = "millis",
         decimals_number = 0,
