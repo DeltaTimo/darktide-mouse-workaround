@@ -25,6 +25,11 @@ return {
         default_value = true,
       },
       {
+        setting_id = "enable_other_mouse",
+        type = "checkbox",
+        default_value = true,
+      },
+      {
         setting_id = "hold_required_help",
         type = "group",
         sub_widgets = {

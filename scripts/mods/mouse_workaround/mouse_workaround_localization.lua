@@ -14,6 +14,9 @@ return {
   enable_right_mouse = {
     en = "Enable workaround for Right Mouse Button",
   },
+  enable_other_mouse = {
+    en = "Enable workaround for other Mouse Buttons",
+  },
   hold_required_help = {
     en = "The following setting helps if spamming melee sometimes results in heavy attacks:",
   },
